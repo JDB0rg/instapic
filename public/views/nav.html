@@ -1,0 +1,38 @@
+<section class="nav-container">
+  <div class="nav-box">
+
+    <section class="main-nav">
+
+        <a class="nav-words" ui-sref="#">logo</a>
+
+    </section>
+    <section>
+
+        <div class="nav-search">search</div>
+
+    </section>
+    <section class="main-nav">
+
+        <a class="nav-words" ui-sref="feed">main feed</a>
+        <a class="nav-words" ui-sref="userFeed">my feed</a>
+
+        <div class="upload-dropdown" name="select gender">
+          <div class="nav-words">upload</div>
+          <div class="upload-content">
+            Upload image
+              <input type="file" fileread accept="image/*" images="images">
+                {{imageToUpload}}
+
+                <!-- <button class="btn btn-default" s3 options="options" name="uploads" ng-model="form.files" required>
+                  Select File
+                </button> -->
+
+          </div>
+        </div>
+
+        <a class="nav-words" ui-sref="#">notificatons</a>
+
+    </section>
+
+  </div>
+</section>

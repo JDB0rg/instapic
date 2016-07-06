@@ -1,0 +1,32 @@
+<navbar></navbar>
+<section class="user-container" ng-controller="userFeedCtrl">
+
+    <section class="user-feed-info">
+
+      <div class="profile-pic-box" ng-repeat="data in userFeed" ng-if="$first">
+        <img class="user-pic" ng-src="{{data.photo}}">
+      </div>
+
+      <div class="profile-info" ng-repeat="data in userFeed" ng-if="$first">
+        <h3><p>{{data.author.username}}</p></h3>
+        <p>{{data.name}}</p>
+          <!-- <strong>{{data.posts}}</strong> posts
+          <strong>{{data.followers}}</strong> followers
+          <strong>{{data.following}}</strong> following -->
+      </div>
+
+    </section>
+
+    <section class="gallery">
+      <div ng-repeat="data in userFeed">
+        <img class="gallery-pic" ng-src="{{data.photo}}">
+      </div>
+
+    </section>
+
+    <section class="button-box">
+      <button class="load-button" type="button" name="button">Load More</button>
+    </section>
+
+<footer></footer>
+</section>

@@ -1,0 +1,73 @@
+<navbar></navbar>
+<section class="edit-container" ng-controller="editCtrl">
+
+  <section class="left-menu-box">
+    <a ui-sref="edit"><p class="left-item-top"><span>Edit Profile</span></p></a>
+    <a href=""><p class="left-item">Change Password</p></a>
+    <a href=""><p class="left-item">Email Preferences</p></a>
+  </section>
+
+  <section class="right-menu-box">
+
+    <div class="edit-box-top" ng-repeat="data in userFeed" ng-if="$first">
+        <aside class="edit-name">
+          <img class="edit-pic" ng-src="{{data.photo}}">
+        </aside>
+      <h2 class="edit-username">{{data.author.username}}</h2>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Name</aside>
+      <div class="edit-field" type="text" name="name" value="" contenteditable><span class="signup-words">Name</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Username</aside>
+      <div class="edit-field" type="text" name="name" value="" contenteditable><span class="signup-words">Username</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Website</aside>
+      <div class="edit-field" type="text" name="name" value="" contenteditable><span class="signup-words">Website</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Password</aside>
+      <div class="edit-bio" type="text" name="name" value="" contenteditable><span class="signup-words">Password</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name"></aside>
+      <div class="edit-box-left">Private Information</div>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Email</aside>
+      <div class="edit-field" type="text" name="name" value="" contenteditable><span class="signup-words">Email</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Phone</aside>
+      <div class="edit-field" type="text" name="name" value="" contenteditable><span class="signup-words">Phone</span></div><br>
+    </div>
+
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name">Gender</aside>
+        <div class="gender-dropdown" name="select gender">
+          <span class="signup-words">Choose Gender<div class="down-arrow"></div></span>
+          <div class="dropdown-content">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </div>
+        </div>
+    </div>
+    <div class="edit-box-left" ng-repeat="data in userFeed" ng-if="$first">
+      <aside class="edit-name"></aside>
+      <div class="edit-button" type="button" name="button"><span class="button-words">Submit</span></div>
+    </div>
+
+  </section>
+
+</section>
+
+<footer></footer>

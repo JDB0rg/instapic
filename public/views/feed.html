@@ -1,0 +1,26 @@
+<navbar></navbar>
+<section class="mainfeed-container" ng-controller="userFeedCtrl">
+
+  <section ng-repeat="data in userFeed" ng-if="$first">
+      <div class="user-info">
+        <div class="feed-user-info">{{data.author.name}}</div>
+        <div class="feed-user-counter">{{date}}</div>
+      </div>
+
+        <img class="profile-pic" ng-src="{{data.photo}}">
+
+      <section>
+        <div class="lower-box">
+          <p class="comments">
+            <strong>{{data.author.name}}</strong>{{data.comment}}
+          </p>
+          <div class="meta-box">
+            <div class="meta-info">Heart</div>
+            <div class="meta-info" contenteditable>Add comment </div>
+          </div>
+        </div>
+      </section>
+
+</section>
+<footer></footer>
+</section>

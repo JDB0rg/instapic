@@ -10,17 +10,17 @@
   <section class="right-box">
     <div class="signup-box">
 
-      <div class="input-field" type="text" name="name" value="" contenteditable><span class="signup-words">Email</span></div><br>
-      <div class="input-field" type="text" name="name" value="" contenteditable><span class="signup-words">Full Name</span></div><br>
-      <div class="input-field" type="text" name="name" value="" contenteditable><span class="signup-words">Username</span></div><br>
-      <div class="input-field" type="text" name="name" value="" contenteditable><span class="signup-words">Password</span></div><br>
-      <div class="input-button" type="button" name="button"><span class="button-words">Log in</span></div>
+      <input ng-model="user.email" class="input-field" type="text" placeholder="Email"><span class="signup-words"></span><br>
+      <input ng-model="user.name" class="input-field" type="text" placeholder="Full Name"><span class="signup-words"></span><br>
+      <input ng-model="user.username" class="input-field" type="text" placeholder="Username"><span class="signup-words"></span><br>
+      <input ng-model="user.password" class="input-field" type="text" placeholder="Password"><span class="signup-words"></span><br>
+      <button class="input-button" type="button" name="button" ng-click="seeUser(user)" ><span class="button-words">Sign up</span></button>
 
       <hr class="style-eight"> or
     </div>
     <div class="lower-input-box">
       <p>
-        Already have an account? <span class="login-words">Log in.</span>
+        Already have an account? <a ui-sref="login"><span class="login-words">Log in</span></a>
       </p>
     </div>
 

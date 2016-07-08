@@ -21,8 +21,8 @@
           <div class="upload-content">
             Upload image
               <input type="file" fileread accept="image/*" images="images">
-                {{imageToUpload}}
 
+                  <img ng-src="{{images.Location}}">
                 <!-- <button class="btn btn-default" s3 options="options" name="uploads" ng-model="form.files" required>
                   Select File
                 </button> -->
@@ -31,7 +31,7 @@
         </div>
 
         <a class="nav-words" ui-sref="#">notificatons</a>
-
+        
     </section>
 
   </div>

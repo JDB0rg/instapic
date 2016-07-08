@@ -1,7 +1,16 @@
 angular.module('inApp')
-  .controller('mainFeedCtrl', function($scope, $http, userFeedService){
+  .controller('mainFeedCtrl', function($scope, $http, userFeedService, $rootScope){
 
-    userFeedService.getFeed().then(function (response){
-    $scope.userFeed = response;
-    })
+    // $scope.since = function(){
+    //
+    // }
+
+    var refresh = function() {
+      userFeedService.getFeed().then(function (response){
+      $scope.userFeed = response;
+      })
+    }
+
+      refresh();
+      $rootScope.$on("upload complete", refresh)
 });

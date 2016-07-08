@@ -18,16 +18,17 @@ angular.module('inApp', ['ui.router'])
       .state("userFeed", {
         templateUrl: "./views/user-feed.html",
         url: "/user-feed",
-        controller: 'userFeedCtrl'
+        controller: 'userFeedCtrl',
+        resolve: {
+          currentMan: function (userFeedService) {
+            return userFeedService.userPhotos()
+          }
+        }
       })
       .state("edit", {
         templateUrl: "./views/edit.html",
         url: "/edit"
       })
-      // .state("upload", {
-      //   templateUrl: "./views/upload.html",
-      //   url: "/upload"
-      // })
 
         $urlRouterProvider.otherwise("login")
   })

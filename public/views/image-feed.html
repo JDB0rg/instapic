@@ -1,10 +1,9 @@
-<navbar></navbar>
-
 <section class="mainfeed-container" ng-controller="mainFeedCtrl">
-  <section ng-repeat="data in userFeed | orderBy: 'createdAt' : true">
+
+  <section ng-repeat="data in userFeed" ng-if="$first">
       <div class="user-info">
         <div class="feed-user-info">{{data.author.name}}</div>
-        <div class="feed-user-counter">{{data.createdAt}}</div>
+        <div class="feed-user-counter">{{date}}</div>
       </div>
 
         <img class="profile-pic" ng-src="{{data.photo}}">
@@ -28,5 +27,4 @@
       </section>
     </section>
 
-<footer></footer>
 </section>

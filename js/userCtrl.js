@@ -23,15 +23,16 @@ module.exports = {
     })
   },
 
-  getUserId: function (req, res, next) {
-      UserMod.findById(req.params.id, function(err, response){
-        if(err) {
-          res.status(500).json(err)
-        } else {
-          res.json(response)
-        }
-      })
-  },
+  // getUserId: function (req, res, next) {
+  //     UserMod.findById(req.user, function(err, response){
+  //     // UserMod.findById(req.params.id, function(err, response){
+  //       if(err) {
+  //         res.status(500).json(err)
+  //       } else {
+  //         res.json(response)
+  //       }
+  //     })
+  // },
 
   updateUserId: function (req, res, next) {
     if(!req.params.id){

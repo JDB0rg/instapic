@@ -4,6 +4,10 @@ angular.module('inApp')
 
   return {
     restrict: 'A',
+    scope: {
+        profile: '=',
+        images: '='
+    },
     link: function (scope, elem, attrs) {
       elem.bind("change", function (changeEvent) {
         var reader = new FileReader();
@@ -11,30 +15,24 @@ angular.module('inApp')
         reader.onloadend = function (loadEvent) {
 
           var fileread = loadEvent.target.result;
-          console.log(fileread);
+          // console.log(fileread);
 
-          // console.log(elem);   // caught on tempArray line 17
-          // var tempArray = elem[0].value.split('\\');
-          // var fileName = tempArray[tempArray.length - 1];
+          console.log(elem);
+          var tempArray = elem[0].value.split('\\');
+          var fileName = tempArray[tempArray.length - 1];
 
           imagesService.storeImage(fileread, fileName)
             .then(function(result) {
-              scope.images.unshift(result.data);
+                  scope.images.unshift(result.data);
+                  console.log("finished" + result);
+
             })
             .catch(function(err){
               console.log(err);
-            })
-
-            var tempArray = elem['context'].value.split('\\');
-            var fileName = tempArray[tempArray.length - 1];
-
+            });
         }
         reader.readAsDataURL(changeEvent.target.files[0]);
       });
     }
   }
 })
-
-.controller('imagectrl', function ($scope) {
-  $scope.images = [];
-});

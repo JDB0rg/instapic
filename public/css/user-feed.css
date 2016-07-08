@@ -4,12 +4,10 @@
   margin: auto;
 }
 .user-feed-info{
-  /*width: 770px;*/
-  width: 1600px;
+  width: 770px;
   height: auto;
   margin: auto;
-  display: flex;
-  flex-direction: row;
+
 }
 .user-pic{
   border-radius: 50%;
@@ -19,7 +17,7 @@
 }
 .profile-pic-box{
   margin: 45px 0px 40px 0px ;
-  width: 240px;
+  width: 230px;
   display: inline-block;
 }
 .profile-info{

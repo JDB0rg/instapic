@@ -60,17 +60,17 @@
   background-color: #ffffcc;
   border-radius: 3px;
   border: 1px solid lightgray;
-  padding-top: 5px;
+  padding-top: 3px 0px 3px 0px;
   margin-top: -13px;
 }
 .input-button{
-  width: 250px;
-  height: 26px;
+  width: 256px;
+  height: 30px;
   text-align: center;
   background-color: #3897f0;
   border-radius: 3px;
   border: 1px solid lightgray;
-  padding-top: 3px;
+  padding-top: 2px;
   margin-top: -9px;
 }
 .button-words{

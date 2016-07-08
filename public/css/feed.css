@@ -28,12 +28,15 @@
   width: 600px;
   height: auto
 }
+.profile-pic{
+  
+}
 .lower-box{
   margin-bottom: 60px;
-  margin-top: 0px;
+  margin-top: -4px;
   width: auto;
   height: auto;
-  padding: 20px 20px 20px 20px;
+  padding: 16px 20px 18px 20px;
   text-align: left;
   border-right: 1px solid lightgray;
   border-left: 1px solid lightgray;
@@ -45,13 +48,33 @@
   display: flex;
   flex-direction: row;
   border-top: 1px solid lightgray;
+  margin-top: 9px;
+}
 
-}
-.meta-info{
-  height: auto;
-  padding: 18px 20px 0px 0px;
-}
 .comments{
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 0px;
+  padding-bottom: 12px;
+}
+.hearts{
+  margin: 0px;
+  padding-bottom: 12px;
+}
+.button{
+  border: 0px solid white;
+  background-color: white;
+  font-size: 16px;
+  font-family: Source Sans Pro;
+  margin: 16px 20px 0px 0px;
+  padding: 0px;
+}
+.comment-box{
+  font-size: 16px;
+  height: 25px;
+  width: 460px;
+  margin: 13px 0px 0px 0px;
+  border: 0px solid white;
+}
+strong{
+  margin: 0px;
+  padding: 0px;
 }

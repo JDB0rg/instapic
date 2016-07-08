@@ -9,7 +9,61 @@ angular.module("inApp")
           console.log("get" + response);
           return response.data;
         })
-    }
+    },
+
+    this.postHearts = function(id){
+      return $http({
+          method: 'POST',
+          url: '/api/photo/' + id
+      }).then(function (response) {
+        console.log("hearts res" + response);
+        return response.data;
+      })
+    },
+
+    this.makeUser = function(user){
+      return $http({
+          method: 'POST',
+          data: user,
+          url: '/api/user/'
+    }).then(function (response) {
+      console.log("new user" + response);
+      return response.data;
+    })
+  },
+
+  // this.userPhotos = function(id){
+  //   return $http({
+  //       method: 'POST',
+  //       url: '/api/photo/' + id
+  //   }).then(function (response) {
+  //     console.log("User Resp" + response);
+  //     return response.data;
+  //   })
+  // },
+
+////////Passport Login////////////
+  this.loginPass = function(login){
+    return $http({
+            method: 'POST',
+            data: login,
+            url: '/login'
+      }).then(function (response) {
+        console.log("new user" + response);
+        return response.data;
+      })
+  }
+
+  // this.newUser = function(newUser) {
+  //     return $http({
+  //         method: 'POST',
+  //         data: newUser,
+  //         url: baseUrl + '/signup'
+  //     }).success(function() {
+  //         $state.go('daily');
+  //     })
+  // }
+
 
     // this.addPhoto = function(photo){
     //     return $http({

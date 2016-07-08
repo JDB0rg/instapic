@@ -1,24 +1,21 @@
 <navbar></navbar>
-<section class="user-container" ng-controller="userFeedCtrl">
+<section class="user-container">
 
     <section class="user-feed-info">
-
-      <div class="profile-pic-box" ng-repeat="data in userFeed" ng-if="$first">
+      <!-- <div class="profile-pic-box" ng-repeat="data in userPicFeed.photo" ng-if="first">
         <img class="user-pic" ng-src="{{data.photo}}">
-      </div>
+      </div> -->
 
-      <div class="profile-info" ng-repeat="data in userFeed" ng-if="$first">
-        <h3><p>{{data.author.username}}</p></h3>
-        <p>{{data.name}}</p>
-          <!-- <strong>{{data.posts}}</strong> posts
-          <strong>{{data.followers}}</strong> followers
-          <strong>{{data.following}}</strong> following -->
+      <div class="profile-info">
+        <h3><p>{{userPicFeed.username}}</p></h3>
+        <p>{{userPicFeed.name}}</p>
+
       </div>
 
     </section>
 
-    <section class="gallery">
-      <div ng-repeat="data in userFeed">
+    <section class="gallery" ng-repeat="data in userPicFeed.photo | orderBy: 'createdAt' : true">
+      <div>
         <img class="gallery-pic" ng-src="{{data.photo}}">
       </div>
 

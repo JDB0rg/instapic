@@ -10,13 +10,24 @@ angular.module("inApp")
           return response.data;
         })
     },
-    this.postFeed = function(){
+
+    // this.postFeed = function(){
+    //   return $http({
+    //       method: 'POST',
+    //       url: '/api/photo'
+    //     }).then(function (response) {
+    //       console.log("get" + response);
+    //       return response.data;
+    //     })
+    // },
+
+    this.userPhotos = function(){
       return $http({
-          method: 'POST',
-          url: '/api/photo'
-        }).then(function (response) {
-          console.log("get" + response);
-          return response.data;
-        })
+          method: 'GET',
+          url: '/me'
+      }).then(function (response) {
+        console.log("User Resp" + response);
+        return response.data;
+      })
     }
 })
